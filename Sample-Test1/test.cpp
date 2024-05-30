@@ -3,9 +3,8 @@
 
 using namespace std;
 
-TEST(PrimeFactors, PrimeTest) {
-	EXPECT_EQ(1, 1);
-	EXPECT_EQ(1, 1);
-	EXPECT_EQ(1, 1);
-	EXPECT_EQ(1, 1);
+TEST(PrimeFactors, Of1) {
+	PrimeFactor primeFactor;
+	vector<int> expected = {};
+	EXPECT_EQ(primeFactor.of(1), expected);
 }
