@@ -3,14 +3,18 @@
 
 using namespace std;
 
-TEST(PrimeFactors, Of1) {
+class PrimeFixture : public testing::Test {
+public:
 	PrimeFactor primeFactor;
-	vector<int> expected = {};
+	vector<int> expected;
+};
+
+TEST_F(PrimeFixture, Of1) {
+	expected = {};
 	EXPECT_EQ(primeFactor.of(1), expected);
 }
 
-TEST(PrimeFactors, Of2) {
-	PrimeFactor primeFactor;
-	vector<int> expected = { 2 };
+TEST_F(PrimeFixture, Of2) {
+	expected = { 2 };
 	EXPECT_EQ(primeFactor.of(2), expected);
 }
